@@ -1,0 +1,27 @@
+<h2>{{ page.label }}</h2>
+
+Page Image: <br />
+{%
+    include directory ~ '/templates/components/thumbnail.html.twig' with {
+        'image' : page.getImage()
+    }
+%}
+
+<hr />
+
+{%
+    include directory ~ '/templates/paragraphs/paragraphs.html.twig' with {
+        'paragraphs' : page.getContent()
+    }
+%}
+
+
+<hr />
+
+<div>
+    <a href="{{ data.pagesUrl }}">View all pages</a>
+</div>
+
+<div>
+    {{ page.getHelloWorld() }}
+</div>

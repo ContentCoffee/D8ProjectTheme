@@ -1,0 +1,8 @@
+<a href="{{ page.getUrl() }}">
+    <h3>{{ page.label() }}</h3>
+    {%
+        include directory ~ '/templates/components/thumbnail.html.twig' with {
+            'image' : page.getImage()
+        }
+    %}
+</a>
