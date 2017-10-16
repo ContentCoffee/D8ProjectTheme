@@ -3,7 +3,9 @@
 Page Image: <br />
 {%
     include directory ~ '/templates/components/thumbnail.html.twig' with {
-        'image' : page.getImage()
+        'image' : page.getImage().entity,
+        'alt' : page.label(),
+        'title' : page.label()
     }
 %}
 
