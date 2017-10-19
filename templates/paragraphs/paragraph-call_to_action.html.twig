@@ -1,4 +1,7 @@
 <div>
+    {{ paragraph.getContent()|raw }}
+</div>
+<div>
 {%
     include directory ~ '/templates/components/button.html.twig' with {
         'button' : paragraph.getButton()
