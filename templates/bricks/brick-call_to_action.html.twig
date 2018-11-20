@@ -1,10 +1,10 @@
 <div>
-    {{ paragraph.getContent()|raw }}
+    {{ brick.getContent()|raw }}
 </div>
 <div>
 {%
     include directory ~ '/templates/components/button.html.twig' with {
-        'button' : paragraph.getButton()
+        'button' : brick.getButton()
     }
 %}
 </div>

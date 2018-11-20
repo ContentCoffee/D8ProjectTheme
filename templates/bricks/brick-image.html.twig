@@ -1,0 +1,7 @@
+{%
+include directory ~ '/templates/components/large.html.twig' with {
+    'image' : brick.getImage().entity,
+    'alt' : brick.getImage().value().title,
+    'title' : brick.getImage().value().title
+}
+%}

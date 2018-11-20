@@ -1,8 +1,0 @@
-{% for paragraph in paragraphs %}
-    <div class="paragraph-{{ paragraph.bundle() }}">
-    {% include directory ~ '/templates/paragraphs/paragraph-' ~ paragraph.bundle() ~ '.html.twig' with {
-        'paragraph' : paragraph
-    }
-    %}
-    </div>
-{% endfor %}

@@ -1,19 +1,30 @@
 <h2>{{ page.label }}</h2>
 
-Page Image: <br />
-{%
-    include directory ~ '/templates/components/thumbnail.html.twig' with {
-        'image' : page.getImage().entity,
-        'alt' : page.label(),
-        'title' : page.label()
-    }
-%}
+
+<p>
+    {{ page.getDescription() }}
+</p>
 
 <hr />
 
+<p>
+Page Image: <br />
 {%
-    include directory ~ '/templates/paragraphs/paragraphs.html.twig' with {
-        'paragraphs' : page.getContent()
+    include directory ~ '/templates/components/image.html.twig' with {
+        'image' : page.getImage().entity,
+        'alt' : page.label(),
+        'title' : page.label(),
+        'style' : 'medium'
+    }
+%}
+</p>
+
+<hr />
+
+
+{%
+    include directory ~ '/templates/bricks/bricks.html.twig' with {
+        'bricks' : page.getContent()
     }
 %}
 

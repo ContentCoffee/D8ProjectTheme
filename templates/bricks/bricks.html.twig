@@ -1,0 +1,8 @@
+{% for brick in bricks %}
+    <div class="brick-{{ brick.bundle() }}">
+    {% include directory ~ '/templates/bricks/brick-' ~ brick.bundle() ~ '.html.twig' with {
+        'brick' : brick
+    }
+    %}
+    </div>
+{% endfor %}
