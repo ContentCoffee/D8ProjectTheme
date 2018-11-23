@@ -1,4 +1,7 @@
 <h1>{{ homepage.label() }}</h1>
-<p>
-    <a href="{{ data.pagesUrl }}">all the pages</a>
-</p>
+<hr />
+{%
+    include directory ~ '/templates/bricks/bricks.html.twig' with {
+    'bricks' : homepage.getContent()
+}
+%}

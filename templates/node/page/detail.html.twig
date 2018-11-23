@@ -1,4 +1,17 @@
-<h2>{{ page.label }}</h2>
+<h1>{{ page.label }}</h1>
+<hr />
+{%
+    include directory ~ '/templates/bricks/bricks.html.twig' with {
+    'bricks' : page.getContent()
+}
+%}
+
+
+
+
+
+
+
 
 {#
 <p>
