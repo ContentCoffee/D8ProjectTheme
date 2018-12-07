@@ -1,6 +1,6 @@
-name: Project
+name: Project X
 type: theme
-description: This is a Content and Coffee Theme
+description: This is a theme for the project
 core: 8.x
 
 base theme: material_base
